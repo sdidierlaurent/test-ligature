@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de ligature pour font d'icon</title>
+    <style>
+@font-face {
+  font-family: 'icomoon';
+  src:  
+    url('./icomoon.woff?nm0nzv') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play:before {
+  content: "\70";
+}
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Test de ligature pour font d'icon</h1>
+        <p>Font réalisée avec <a href="https://icomoon.io/app/#/select/font" hreflang="en">icomoon</a></p>
+        <p><i class="icon">play</i></p>
+    </main>
+</body>
+</html>
